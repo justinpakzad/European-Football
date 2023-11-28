@@ -10,7 +10,6 @@ def hide_spines(ax: plt.Axes):
     for spine in ax.spines.values():
         spine.set_visible(False)
 
-
 def annotate_bars(
     ax: plt.Axes,
     lim: int = 10,
@@ -49,9 +48,3 @@ def annotate_bars(
                 fontsize=11,
             )
 
-def create_xlim(df, col1, col2):
-    min_val = min(df[col1].min(), df[col2].min())
-    max_val = max(df[col1].max(), df[col2].max())
-    buffer = 0.05 * (max_val - min_val)
-    x_range = (min_val - buffer, max_val + buffer)
-    return x_range
